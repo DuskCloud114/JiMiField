@@ -9,6 +9,9 @@ public class PlayerInputHandler : MonoBehaviour, IInputProvider
 
     public void OnMoveInput(InputAction.CallbackContext ctx)
     {
+        // 查看输入系统传入的 Vector2 的值
+        Debug.Log($"Move Input Received: {ctx.ReadValue<Vector2>()}");
+
         Vector2 moveInput = ctx.ReadValue<Vector2>();
         currentInputFrame.MoveInput = moveInput;
     }
@@ -36,6 +39,7 @@ public class PlayerInputHandler : MonoBehaviour, IInputProvider
         }
     }
 
+    // 获取当前输入帧
     public InputFrame GetInputFrame()
     {
         return currentInputFrame;
