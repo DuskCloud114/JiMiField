@@ -36,4 +36,13 @@ public class Repeater : MonoBehaviour
         isPowered = powered; // 更新供电状态
         UpdateVisual(); // 更新视觉状态
     }
+
+    private void OnDrawGizmos()
+    {
+        if (config == null) return; // 如果没有配置文件， 不绘制 gizmo
+
+        // 在编辑器中绘制供电范围的方形 gizmo
+        Gizmos.color = isPowered ? config.PowerColor : config.UnpowerColor; // 根据供电状态设置 gizmo 颜色
+        Gizmos.DrawWireCube(transform.position, new Vector3(config.PowerRange * 2, config.PowerRange * 2, 0)); // 绘制供电范围的方形 gizmo
+    }
 }
