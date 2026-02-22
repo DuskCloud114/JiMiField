@@ -14,6 +14,9 @@ public class Repeater : MonoBehaviour
     // Renderer 组件是 Unity 渲染组件的基类， SpriteRenderer 是 Renderer 的一个具体实现， 用于渲染网格对象
     private SpriteRenderer spriteRenderer; // 中继器的 SpriteRenderer 组件 用于改变颜色
 
+    // 字段
+    public bool IsPowered => isPowered; // 供电状态的公共只读属性
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // 获取 SpriteRenderer 组件
