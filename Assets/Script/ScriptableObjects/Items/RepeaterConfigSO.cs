@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RepeaterConfig", menuName = "Items/RepeaterConfig")]
+[CreateAssetMenu(fileName = "NewRepeaterConfig", menuName = "Items/RepeaterConfig")]
 
 // 中继器配置文件 继承了 ScriptableObject 可以在Unity编辑器中创建实例并配置数据
 public class RepeaterConfigSO : ScriptableObject

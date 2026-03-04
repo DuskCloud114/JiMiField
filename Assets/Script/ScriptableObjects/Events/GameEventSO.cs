@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameEventSO", menuName = "Events/GameEventSO")]
+[CreateAssetMenu(fileName = "NewGameEventSO", menuName = "Events/GameEventSO")]
 
 // 游戏事件配置文件 继承了 ScriptableObject 可以在Unity编辑器中创建实例并配置数据
 public class GameEventSO : ScriptableObject
