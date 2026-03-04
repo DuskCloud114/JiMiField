@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewInteractEvent", menuName = "ScriptableObjects/Events/InteractEventSO")]
+[CreateAssetMenu(fileName = "NewInteractEvent", menuName = "Events/InteractEventSO")]
 public class InteractEventSo : GameEventWithParam<IInteractable>
 {
 
