@@ -17,3 +17,6 @@ MonoBehaviour:
   powerRange: 3
   unpowerColor: {r: 0.9811321, g: 0.6062656, b: 0.6062656, a: 1}
   powerColor: {r: 0.73571557, g: 0.9339623, b: 0.79981107, a: 1}
+  interactPrompt: "\u5F00\u59CB\u4F20\u8F93\u7535\u7EBF"
+  interactDistance: 1
+  interactPriority: 2
