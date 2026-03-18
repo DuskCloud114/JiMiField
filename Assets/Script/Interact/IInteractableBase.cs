@@ -8,7 +8,7 @@ public abstract class IInteractableBase : MonoBehaviour, IInteractable
 
     [Tooltip("是否启用交互")]
     [SerializeField] private bool isInteractable = true; // 是否启用交互
-    
+
     [Tooltip("交互提示， 用于 UI 显示")]
     [SerializeField] private string interactPrompt; // 交互提示， 用于 UI 显示
 
@@ -19,6 +19,12 @@ public abstract class IInteractableBase : MonoBehaviour, IInteractable
     public virtual string InteractPrompt => interactPrompt; // 交互提示
     public virtual int InteractPriority => interactPriority; // 交互优先级
     public virtual Transform InteractTransform => transform; // 交互点位置， 默认为物体中心
+
+    public bool IsInteractionEnabled
+    {
+        get => isInteractable;
+        protected set => isInteractable = value;
+    }
 
 
     public virtual bool CanInteract(GameObject interactor) => isInteractable;
