@@ -15,9 +15,21 @@ public abstract class IInteractableBase : MonoBehaviour, IInteractable
     [Tooltip("交互优先级， 数值越小优先级越高")]
     [SerializeField] private int interactPriority; // 交互优先级， 数值越小优先级越高
 
-    public virtual bool IsInteractable => isInteractable; // 是否可交互
-    public virtual string InteractPrompt => interactPrompt; // 交互提示
-    public virtual int InteractPriority => interactPriority; // 交互优先级
+    public virtual bool IsInteractable
+    {
+        get => isInteractable;
+        protected set => isInteractable = value;
+    }
+    public virtual string InteractPrompt
+    {
+        get => interactPrompt;
+        protected set => interactPrompt = value;
+    }
+    public virtual int InteractPriority
+    {
+        get => interactPriority;
+        protected set => interactPriority = value;
+    }
     public virtual Transform InteractTransform => transform; // 交互点位置， 默认为物体中心
 
     public bool IsInteractionEnabled
