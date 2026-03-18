@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     // 交互参数 暂用 之后将写入 SO
-    [SerializeField] private float interactionRange;
+    [SerializeField] private float interactionRange; 
     [SerializeField] private float interactInterval; // 交互检测间隔
     [SerializeField] private LayerMask interactableLayerMask;
 
@@ -20,7 +20,12 @@ public class PlayerInteraction : MonoBehaviour
     [Tooltip("丢失交互对象时广播")]
     [SerializeField] private GameEventSO onTargetLostEvent; // 目标丢失事件 
 
-
+    /// <summary>
+    /// 下一步计划： 
+    /// 内存收敛：应该提供一个全局唯一的 PhysicsQueryService，内部持有一个全局静态的 Collider2D[128] 缓存池供单线程轮流使用，避免即使是初始化时产生的冗余内存。
+    /// 职责分离：业务逻辑层（如技能系统、AI视觉）只需要请求数据，不应该关心底层是如何 NonAlloc 的。
+    /// 使用 ContactFilter2D：现代 Unity 推荐使用 ContactFilter2D 配合 List<Collider2D>，这是更新的封装，底层实现原理相似，但支持更多过滤条件。
+    /// </summary>
     private Collider2D[] hitBuffer = new Collider2D[10]; // 用于存储检测结果的缓冲区
     private List<IInteractable> interactableObjects = new List<IInteractable>();
 
@@ -90,7 +95,8 @@ public class PlayerInteraction : MonoBehaviour
 
     private void HandleInteraction()
     {
-        
+        /// 下一步计划
+        /// 绑定新版输入系统的交互按键事件，触发当前目标的交互逻辑。
     }
 
     private void OnDrawGizmosSelected()

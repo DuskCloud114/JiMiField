@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5491085286797464217}
   - component: {fileID: 8593319492228390791}
   - component: {fileID: 1291173000413989054}
+  - component: {fileID: 4336710975795555990}
   - component: {fileID: 4192358538488567173}
   - component: {fileID: 4131018685447076279}
   m_Layer: 0
@@ -147,6 +148,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+--- !u!114 &4336710975795555990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163588450373046996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b83252e70fd0a488c945394ef52ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 0
+  interactInterval: 0
+  interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  onTargetFoundEvent: {fileID: 0}
+  onTargetLostEvent: {fileID: 0}
 --- !u!114 &4192358538488567173
 MonoBehaviour:
   m_ObjectHideFlags: 0

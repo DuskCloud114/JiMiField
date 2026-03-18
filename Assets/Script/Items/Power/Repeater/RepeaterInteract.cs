@@ -15,7 +15,7 @@ public class RepeaterInteract : IInteractableBase
     public override int InteractPriority => interactPriority; // 重写父类交互优先级字段， 数值越小优先级越高 可在配置文件中修改
 
     [Tooltip("拖入交互事件配置文件")]
-    private InteractEventSO onInteractEvent; // 交互事件配置文件
+    [SerializeField] private InteractEventSO onInteractEvent; // 交互事件配置文件
 
 
 
