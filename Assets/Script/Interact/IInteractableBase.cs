@@ -37,6 +37,6 @@ public abstract class IInteractableBase : MonoBehaviour, IInteractable
     // 不是所有被交互对象都需要交互结束逻辑， 因此定义为虚方法， 默认实现为空
     public virtual void OnInteractEnd(GameObject interactor) { }
 
-    public virtual void SetInteractable(bool value) => isInteractable = value; // 设置是否可交互
+    public virtual void SetInteractable(bool value) => IsInteractionEnabled = value; // 设置是否可交互
 
 }
